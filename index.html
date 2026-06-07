@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Eco Fashion Retailer</title>
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="index.html" class="logo">
+    <img src="assets/images/logo/logo.jpg" alt="Eco Fashion Retailer Logo" />
+      <span>Eco Fashion Retailer</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <a href="index.html">Home</a>
+      <a href="#features">Features</a>
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#reviews">Reviews</a>
+    </nav>
+
+    <div class="header-icons">
+      <button id="menu-btn" aria-label="Open Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button id="search-btn" aria-label="Open Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <a href="pages/cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+
+      <a href="pages/login.html">
+        <i class="fas fa-user"></i>
+      </a>
+    </div>
+
+    <form class="search-form" id="search-form">
+      <input type="text" id="search-input" placeholder="Search sustainable products..." />
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="search-results" id="search-results"></div>
+    </form>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <p class="tagline">Sustainable fashion for a better future</p>
+      <h1>Where sustainability meets style</h1>
+      <p>
+        Shop eco-friendly clothing, accessories, and beauty products made with
+        ethical materials, transparent sourcing, and lower environmental impact.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#categories" class="primary-btn">Shop Now</a>
+        <a href="#features" class="secondary-btn">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="features" id="features">
+    <h2 class="section-title">Why Choose Us?</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Eco-Verified Products</h3>
+        <p>
+          Products include sustainability details like material type,
+          certification, eco score, and environmental impact.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-recycle"></i>
+        <h3>Green Reward Points</h3>
+        <p>
+          Earn reward points for sustainable purchases and redeem them during
+          checkout for discounts.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-shirt"></i>
+        <h3>Slow Fashion Focus</h3>
+        <p>
+          We promote durable, ethical, and conscious fashion instead of
+          fast-fashion consumption.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories -->
+  <section class="categories" id="categories">
+    <h2 class="section-title">Shop by Category</h2>
+
+    <div class="category-grid">
+      <div class="category-card">
+      <img src="assets/images/categories/clothing.jpg" alt="Sustainable Clothing" />
+        <h3>Clothing</h3>
+        <p>Organic cotton, hemp, bamboo, recycled fabrics</p>
+        <a href="pages/clothing.html" class="card-btn">Explore</a>
+      </div>
+
+      <div class="category-card">
+        <img src="assets/images/categories/accessories.jpg" alt="Eco Fashion Accessories" />
+        <h3>Accessories</h3>
+        <p>Reusable bags, cork sandals, ethical fashion add-ons</p>
+        <a href="pages/accessories.html" class="card-btn">Explore</a>
+      </div>
+
+      <div class="category-card">
+<img src="assets/images/categories/beauty.jpg" alt="Natural Beauty Products" />
+        <h3>Beauty</h3>
+        <p>Cruelty-free, zero-waste, natural self-care products</p>
+        <a href="pages/beauty.html" class="card-btn">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products -->
+  <section class="products" id="products">
+    <h2 class="section-title">Featured Sustainable Products</h2>
+
+    <div class="product-grid" id="featured-products">
+      <!-- Products will be loaded using JavaScript -->
+    </div>
+  </section>
+
+  <!-- Impact Section -->
+  <section class="impact-section">
+    <div class="impact-content">
+      <h2>Track the impact of your choices</h2>
+      <p>
+        Every product shows estimated water saved, CO₂ reduced, eco score,
+        and reward points earned.
+      </p>
+
+      <div class="impact-stats">
+        <div>
+          <h3>Eco Score</h3>
+          <p>Know how sustainable each product is.</p>
+        </div>
+
+        <div>
+          <h3>CO₂ Saved</h3>
+          <p>See the estimated carbon impact of your cart.</p>
+        </div>
+
+        <div>
+          <h3>Green Points</h3>
+          <p>Earn rewards for sustainable purchases.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reviews -->
+  <section class="reviews" id="reviews">
+    <h2 class="section-title">Customer Reviews</h2>
+
+    <div class="review-grid">
+      <div class="review-card">
+        <p>
+          “The organic cotton T-shirt is comfortable and I love seeing the eco
+          score before buying.”
+        </p>
+        <h3>Priya Sharma</h3>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        <p>
+          “The reward points make sustainable shopping more interesting and
+          useful.”
+        </p>
+        <h3>Ananya Patel</h3>
+        <div class="stars">★★★★★</div>
+      </div>
+
+      <div class="review-card">
+        <p>
+          “The product impact details helped me choose better alternatives.”
+        </p>
+        <h3>Rahul Verma</h3>
+        <div class="stars">★★★★☆</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Eco Fashion Retailer</h3>
+        <p>
+          A sustainable fashion frontend platform focused on eco-score,
+          green rewards, and conscious shopping.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="#features">Features</a>
+        <a href="#categories">Categories</a>
+        <a href="#products">Products</a>
+      </div>
+
+      <div>
+        <h3>Categories</h3>
+        <a href="pages/clothing.html">Clothing</a>
+        <a href="pages/accessories.html">Accessories</a>
+        <a href="pages/beauty.html">Beauty</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: support@ecofashion.com</p>
+        <p>Phone: +91 9999555413</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Eco Fashion Retailer. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="data/products.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/products.js"></script>
+  <script src="js/search.js"></script>
+</body>
+
+</html>

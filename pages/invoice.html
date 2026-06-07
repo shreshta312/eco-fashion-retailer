@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Invoice | Eco Fashion Retailer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/checkout.css" />
+</head>
+
+<body>
+  <header class="site-header no-print">
+    <a href="../index.html" class="logo">
+      <img src="../assets/images/logo/logo.jpg" alt="Eco Fashion Retailer Logo" />
+      <span>Eco Fashion Retailer</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#categories">Categories</a>
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#reviews">Reviews</a>
+    </nav>
+
+    <div class="header-icons">
+      <button id="menu-btn" aria-label="Open Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button id="search-btn" aria-label="Open Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+
+      <a href="login.html">
+        <i class="fas fa-user"></i>
+      </a>
+    </div>
+
+    <form class="search-form" id="search-form">
+      <input type="text" id="search-input" placeholder="Search sustainable products..." />
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="search-results" id="search-results"></div>
+    </form>
+  </header>
+
+  <main class="checkout-page">
+    <section class="invoice-section">
+      <div class="invoice-card">
+        <div class="invoice-header">
+          <div>
+            <h1>Invoice</h1>
+            <p>Eco Fashion Retailer</p>
+          </div>
+
+          <div class="invoice-logo">
+            <i class="fas fa-leaf"></i>
+          </div>
+        </div>
+
+        <div class="invoice-info-grid">
+          <div class="invoice-box">
+            <h2>Invoice Details</h2>
+            <p><strong>Invoice ID:</strong> <span id="invoice-id">Loading...</span></p>
+            <p><strong>Order ID:</strong> <span id="invoice-order-id">Loading...</span></p>
+            <p><strong>Date:</strong> <span id="invoice-date">Loading...</span></p>
+            <p><strong>Payment:</strong> <span id="invoice-payment-status">Loading...</span></p>
+          </div>
+
+          <div class="invoice-box">
+            <h2>Billed To</h2>
+            <p id="invoice-customer-name"></p>
+            <p id="invoice-customer-phone"></p>
+            <p id="invoice-customer-address"></p>
+          </div>
+        </div>
+
+        <div class="invoice-box">
+          <h2>Items Purchased</h2>
+
+          <div class="invoice-table-wrapper">
+            <table class="invoice-table">
+              <thead>
+                <tr>
+                  <th>Product</th>
+                  <th>Qty</th>
+                  <th>Eco Score</th>
+                  <th>Price</th>
+                  <th>Total</th>
+                </tr>
+              </thead>
+
+              <tbody id="invoice-items">
+                <!-- Items loaded by JS -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="invoice-bottom-grid">
+          <div class="invoice-box eco-invoice-box">
+            <h2>Eco Impact</h2>
+            <p><strong>Water Saved:</strong> <span id="invoice-water-saved">0 L</span></p>
+            <p><strong>CO₂ Reduced:</strong> <span id="invoice-co2-saved">0 kg</span></p>
+            <p><strong>Green Points:</strong> <span id="invoice-reward-points">0</span></p>
+          </div>
+
+          <div class="invoice-box price-invoice-box">
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <span id="invoice-subtotal">₹0.00</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Shipping</span>
+              <span id="invoice-shipping">₹0.00</span>
+            </div>
+
+            <div class="summary-row">
+              <span>Tax</span>
+              <span id="invoice-tax">₹0.00</span>
+            </div>
+
+            <div class="summary-row total-row">
+              <span>Total</span>
+              <span id="invoice-total">₹0.00</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="invoice-note">
+          <p>
+            Thank you for choosing sustainable fashion. Your purchase supports
+            conscious shopping and eco-friendly product choices.
+          </p>
+        </div>
+
+        <div class="invoice-actions no-print">
+          <button class="place-order-btn action-link" onclick="window.print()">
+            Print Invoice
+          </button>
+
+          <a href="../index.html" class="secondary-action-link">
+            Continue Shopping
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="footer-grid">
+      <div>
+        <h3>Eco Fashion Retailer</h3>
+        <p>
+          A sustainable fashion frontend platform focused on eco-score,
+          green rewards, and conscious shopping.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#categories">Categories</a>
+        <a href="../index.html#products">Products</a>
+      </div>
+
+      <div>
+        <h3>Categories</h3>
+        <a href="clothing.html">Clothing</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="beauty.html">Beauty</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: support@ecofashion.com</p>
+        <p>Phone: +91 9999555413</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Eco Fashion Retailer. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="../data/products.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/invoice.js"></script>
+</body>
+
+</html>

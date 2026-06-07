@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Cart | Eco Fashion Retailer</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/cart.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="../index.html" class="logo">
+      <img src="../assets/images/logo/logo.jpg" alt="Eco Fashion Retailer Logo" />
+      <span>Eco Fashion Retailer</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#categories">Categories</a>
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#reviews">Reviews</a>
+    </nav>
+
+    <div class="header-icons">
+      <button id="menu-btn" aria-label="Open Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button id="search-btn" aria-label="Open Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+
+      <a href="login.html">
+        <i class="fas fa-user"></i>
+      </a>
+    </div>
+
+    <form class="search-form" id="search-form">
+      <input type="text" id="search-input" placeholder="Search sustainable products..." />
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="search-results" id="search-results"></div>
+    </form>
+  </header>
+
+  <!-- Cart Page -->
+  <main class="cart-page">
+    <section class="cart-hero">
+      <h1>Your Shopping Cart</h1>
+      <p>Review your selected sustainable products and track your eco impact.</p>
+    </section>
+
+    <section class="cart-layout">
+      <!-- Cart Items -->
+      <div class="cart-items-section">
+        <div class="cart-section-header">
+          <h2>Cart Items</h2>
+          <button class="clear-cart-btn" onclick="clearCart()">
+            Clear Cart
+          </button>
+        </div>
+
+        <div id="cart-items-container">
+          <!-- Cart items will be loaded using JavaScript -->
+        </div>
+      </div>
+
+      <!-- Summary -->
+      <aside class="cart-summary-section">
+        <div class="summary-card">
+          <h2>Order Summary</h2>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="cart-subtotal">₹0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="cart-shipping">₹0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Tax (5%)</span>
+            <span id="cart-tax">₹0.00</span>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <span id="cart-total">₹0.00</span>
+          </div>
+
+          <a href="checkout.html" class="checkout-btn" id="checkout-btn">
+            Proceed to Checkout
+          </a>
+        </div>
+
+        <div class="summary-card eco-impact-card">
+          <h2>Your Eco Impact</h2>
+
+          <div class="impact-row">
+            <i class="fas fa-tint"></i>
+            <div>
+              <h3 id="cart-water-saved">0 L</h3>
+              <p>Water Saved</p>
+            </div>
+          </div>
+
+          <div class="impact-row">
+            <i class="fas fa-cloud"></i>
+            <div>
+              <h3 id="cart-co2-saved">0 kg</h3>
+              <p>CO₂ Reduced</p>
+            </div>
+          </div>
+
+          <div class="impact-row">
+            <i class="fas fa-leaf"></i>
+            <div>
+              <h3 id="cart-reward-points">0</h3>
+              <p>Green Points Earned</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Eco Fashion Retailer</h3>
+        <p>
+          A sustainable fashion frontend platform focused on eco-score,
+          green rewards, and conscious shopping.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#categories">Categories</a>
+        <a href="../index.html#products">Products</a>
+      </div>
+
+      <div>
+        <h3>Categories</h3>
+        <a href="clothing.html">Clothing</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="beauty.html">Beauty</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: support@ecofashion.com</p>
+        <p>Phone: +91 9999555413</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Eco Fashion Retailer. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../data/products.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/search.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Clothing | Eco Fashion Retailer</title>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <a href="../index.html" class="logo">
+      <img src="../assets/images/logo/logo.jpg" alt="Eco Fashion Retailer Logo" />
+      <span>Eco Fashion Retailer</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#categories">Categories</a>
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#reviews">Reviews</a>
+    </nav>
+
+    <div class="header-icons">
+      <button id="menu-btn" aria-label="Open Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button id="search-btn" aria-label="Open Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+
+      <a href="login.html">
+        <i class="fas fa-user"></i>
+      </a>
+    </div>
+
+    <form class="search-form" id="search-form">
+      <input type="text" id="search-input" placeholder="Search sustainable products..." />
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="search-results" id="search-results"></div>
+    </form>
+  </header>
+
+  <!-- Category Hero -->
+  <section class="category-page-hero">
+    <div>
+      <p class="tagline">Eco-Friendly Wardrobe</p>
+      <h1>Sustainable Clothing</h1>
+      <p>
+        Explore organic cotton, hemp, bamboo, recycled wool, linen, and
+        low-impact fashion designed for conscious everyday wear.
+      </p>
+    </div>
+  </section>
+
+  <!-- Category Info -->
+  <section class="features">
+    <h2 class="section-title">Why Sustainable Clothing?</h2>
+
+    <div class="feature-grid">
+      <div class="feature-card">
+        <i class="fas fa-seedling"></i>
+        <h3>Natural Materials</h3>
+        <p>
+          Choose clothing made from organic cotton, hemp, bamboo, and linen
+          instead of high-impact synthetic fabrics.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-recycle"></i>
+        <h3>Reduced Waste</h3>
+        <p>
+          Recycled and durable fabrics help reduce textile waste and support
+          slow fashion choices.
+        </p>
+      </div>
+
+      <div class="feature-card">
+        <i class="fas fa-leaf"></i>
+        <h3>Eco Impact</h3>
+        <p>
+          Each product shows eco score, water saved, CO₂ reduced, and green
+          reward points.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="products">
+    <h2 class="section-title">Clothing Products</h2>
+
+    <div class="product-grid" id="category-products">
+      <!-- Clothing products will be loaded using JavaScript -->
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Eco Fashion Retailer</h3>
+        <p>
+          A sustainable fashion frontend platform focused on eco-score,
+          green rewards, and conscious shopping.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#categories">Categories</a>
+        <a href="../index.html#products">Products</a>
+      </div>
+
+      <div>
+        <h3>Categories</h3>
+        <a href="clothing.html">Clothing</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="beauty.html">Beauty</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: support@ecofashion.com</p>
+        <p>Phone: +91 9999555413</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Eco Fashion Retailer. All rights reserved.
+    </p>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="../data/products.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/search.js"></script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      renderCategoryProducts("clothing");
+    });
+  </script>
+</body>
+
+</html>

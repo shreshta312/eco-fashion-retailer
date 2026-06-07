@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Checkout | Eco Fashion Retailer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/checkout.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="logo">
+      <img src="../assets/images/logo/logo.jpg" alt="Eco Fashion Retailer Logo" />
+      <span>Eco Fashion Retailer</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#categories">Categories</a>
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#reviews">Reviews</a>
+    </nav>
+
+    <div class="header-icons">
+      <button id="menu-btn" aria-label="Open Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button id="search-btn" aria-label="Open Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+
+      <a href="login.html">
+        <i class="fas fa-user"></i>
+      </a>
+    </div>
+
+    <form class="search-form" id="search-form">
+      <input type="text" id="search-input" placeholder="Search sustainable products..." />
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="search-results" id="search-results"></div>
+    </form>
+  </header>
+
+  <main class="checkout-page">
+    <section class="checkout-hero">
+      <h1>Checkout</h1>
+      <p>Enter your delivery details and review your sustainable order.</p>
+    </section>
+
+    <section class="checkout-layout">
+      <div class="checkout-form-section">
+        <h2>Delivery Address</h2>
+
+        <form id="checkout-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="fullName">Full Name</label>
+              <input type="text" id="fullName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="address">Full Address</label>
+            <textarea id="address" rows="4" required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="city">City</label>
+              <input type="text" id="city" required />
+            </div>
+
+            <div class="form-group">
+              <label for="state">State</label>
+              <input type="text" id="state" required />
+            </div>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="pincode">Pincode</label>
+              <input type="text" id="pincode" required />
+            </div>
+
+            <div class="form-group">
+              <label for="paymentMethod">Preferred Payment Method</label>
+              <select id="paymentMethod" required>
+                <option value="">Select payment method</option>
+                <option value="UPI">UPI</option>
+                <option value="Card">Credit/Debit Card</option>
+                <option value="Net Banking">Net Banking</option>
+                <option value="Cash on Delivery">Cash on Delivery</option>
+              </select>
+            </div>
+          </div>
+
+          <button type="submit" class="place-order-btn">
+            Continue to Payment
+          </button>
+        </form>
+      </div>
+
+      <aside class="checkout-summary-section">
+        <div class="checkout-summary-card">
+          <h2>Order Summary</h2>
+
+          <div id="checkout-items">
+            <!-- Items loaded by JS -->
+          </div>
+
+          <div class="summary-divider"></div>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="checkout-subtotal">₹0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="checkout-shipping">₹0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Tax (5%)</span>
+            <span id="checkout-tax">₹0.00</span>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>Total</span>
+            <span id="checkout-total">₹0.00</span>
+          </div>
+        </div>
+
+        <div class="checkout-summary-card eco-impact-card">
+          <h2>Eco Impact</h2>
+
+          <div class="impact-row">
+            <i class="fas fa-tint"></i>
+            <div>
+              <h3 id="checkout-water-saved">0 L</h3>
+              <p>Water Saved</p>
+            </div>
+          </div>
+
+          <div class="impact-row">
+            <i class="fas fa-cloud"></i>
+            <div>
+              <h3 id="checkout-co2-saved">0 kg</h3>
+              <p>CO₂ Reduced</p>
+            </div>
+          </div>
+
+          <div class="impact-row">
+            <i class="fas fa-leaf"></i>
+            <div>
+              <h3 id="checkout-reward-points">0</h3>
+              <p>Green Points Earned</p>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Eco Fashion Retailer</h3>
+        <p>
+          A sustainable fashion frontend platform focused on eco-score,
+          green rewards, and conscious shopping.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#categories">Categories</a>
+        <a href="../index.html#products">Products</a>
+      </div>
+
+      <div>
+        <h3>Categories</h3>
+        <a href="clothing.html">Clothing</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="beauty.html">Beauty</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: support@ecofashion.com</p>
+        <p>Phone: +91 9999555413</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Eco Fashion Retailer. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="../data/products.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/checkout.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Order Confirmation | Eco Fashion Retailer</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/checkout.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="../index.html" class="logo">
+      <img src="../assets/images/logo/logo.jpg" alt="Eco Fashion Retailer Logo" />
+      <span>Eco Fashion Retailer</span>
+    </a>
+
+    <nav class="navbar" id="navbar">
+      <a href="../index.html">Home</a>
+      <a href="../index.html#features">Features</a>
+      <a href="../index.html#categories">Categories</a>
+      <a href="../index.html#products">Products</a>
+      <a href="../index.html#reviews">Reviews</a>
+    </nav>
+
+    <div class="header-icons">
+      <button id="menu-btn" aria-label="Open Menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <button id="search-btn" aria-label="Open Search">
+        <i class="fas fa-search"></i>
+      </button>
+
+      <a href="cart.html" class="cart-link">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+      </a>
+
+      <a href="login.html">
+        <i class="fas fa-user"></i>
+      </a>
+    </div>
+
+    <form class="search-form" id="search-form">
+      <input type="text" id="search-input" placeholder="Search sustainable products..." />
+      <button type="submit">
+        <i class="fas fa-search"></i>
+      </button>
+      <div class="search-results" id="search-results"></div>
+    </form>
+  </header>
+
+  <main class="checkout-page">
+    <section class="order-confirmation-section">
+      <div class="confirmation-card">
+        <div class="success-icon">
+          <i class="fas fa-check"></i>
+        </div>
+
+        <h1>Order Confirmed!</h1>
+        <p class="confirmation-message">
+          Thank you for shopping sustainably. Your eco-friendly order has been placed successfully.
+        </p>
+
+        <div class="order-basic-info">
+          <p><strong>Order ID:</strong> <span id="order-id">Loading...</span></p>
+          <p><strong>Order Date:</strong> <span id="order-date">Loading...</span></p>
+          <p><strong>Payment Status:</strong> <span id="payment-status">Loading...</span></p>
+          <p><strong>Order Status:</strong> <span id="order-status">Loading...</span></p>
+        </div>
+
+        <div class="confirmation-grid">
+          <div class="confirmation-box">
+            <h2>Delivery Details</h2>
+            <p id="customer-name"></p>
+            <p id="customer-phone"></p>
+            <p id="customer-address"></p>
+          </div>
+
+          <div class="confirmation-box">
+            <h2>Eco Impact</h2>
+
+            <div class="impact-row">
+              <i class="fas fa-tint"></i>
+              <div>
+                <h3 id="confirm-water-saved">0 L</h3>
+                <p>Water Saved</p>
+              </div>
+            </div>
+
+            <div class="impact-row">
+              <i class="fas fa-cloud"></i>
+              <div>
+                <h3 id="confirm-co2-saved">0 kg</h3>
+                <p>CO₂ Reduced</p>
+              </div>
+            </div>
+
+            <div class="impact-row">
+              <i class="fas fa-leaf"></i>
+              <div>
+                <h3 id="confirm-reward-points">0</h3>
+                <p>Green Points Earned</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="confirmation-box order-items-box">
+          <h2>Ordered Items</h2>
+          <div id="confirmed-items">
+            <!-- Items loaded by JS -->
+          </div>
+        </div>
+
+        <div class="confirmation-box">
+          <h2>Price Summary</h2>
+
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <span id="confirm-subtotal">₹0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Shipping</span>
+            <span id="confirm-shipping">₹0.00</span>
+          </div>
+
+          <div class="summary-row">
+            <span>Tax</span>
+            <span id="confirm-tax">₹0.00</span>
+          </div>
+
+          <div class="summary-row total-row">
+            <span>Total Paid</span>
+            <span id="confirm-total">₹0.00</span>
+          </div>
+        </div>
+
+        <div class="confirmation-actions">
+          <a href="../index.html" class="place-order-btn action-link">
+            Continue Shopping
+          </a>
+
+          <a href="invoice.html" class="secondary-action-link">
+            View Invoice
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <h3>Eco Fashion Retailer</h3>
+        <p>
+          A sustainable fashion frontend platform focused on eco-score,
+          green rewards, and conscious shopping.
+        </p>
+      </div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <a href="../index.html">Home</a>
+        <a href="../index.html#features">Features</a>
+        <a href="../index.html#categories">Categories</a>
+        <a href="../index.html#products">Products</a>
+      </div>
+
+      <div>
+        <h3>Categories</h3>
+        <a href="clothing.html">Clothing</a>
+        <a href="accessories.html">Accessories</a>
+        <a href="beauty.html">Beauty</a>
+      </div>
+
+      <div>
+        <h3>Contact</h3>
+        <p>Email: support@ecofashion.com</p>
+        <p>Phone: +91 9999555413</p>
+      </div>
+    </div>
+
+    <p class="copyright">
+      © 2026 Eco Fashion Retailer. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="../data/products.js"></script>
+  <script src="../js/main.js"></script>
+  <script src="../js/cart.js"></script>
+  <script src="../js/products.js"></script>
+  <script src="../js/search.js"></script>
+  <script src="../js/order_conf.js"></script>
+</body>
+
+</html>
