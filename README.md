@@ -134,9 +134,7 @@ eco-fashion-retailer/
 
 ![Login](screenshots/login.png)
 
-### Register
 
-![Register](screenshots/register.png)
 
 ## How to Run Locally
 
